@@ -1,11 +1,10 @@
 package alarms.test.app;
 
-import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import alarms.test.model.FileModel;
@@ -22,7 +21,7 @@ public class Controller {
 			service.add(new FileModel("D:\\01. Mamma Mia.mp3"));
 			service.add(new FileModel("D:\\01. Mamma Mia.mp3"));
 			service.add(new FileModel("D:\\test.xls"));
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -38,8 +37,18 @@ public class Controller {
 	}
 
 	@RequestMapping("/file-service/delete-file")
-	public void deleteFile(@RequestBody FileModel file) {
-		service.delete(file);
+	public void deleteFile(@RequestParam(value = "fileId") int fileId) {
+		service.delete(fileId);
+	}
+
+	@RequestMapping("/file-service/add-file")
+	public void addFile(@RequestParam(value = "filePath") String filePath) {
+		try {
+			FileModel file = new FileModel(filePath);
+			service.add(file);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

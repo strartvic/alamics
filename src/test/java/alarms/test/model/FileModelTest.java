@@ -2,8 +2,6 @@ package alarms.test.model;
 
 import static org.junit.Assert.assertNotNull;
 
-import java.io.IOException;
-
 import org.junit.Test;
 
 public class FileModelTest {
@@ -14,7 +12,7 @@ public class FileModelTest {
 			FileModel file = new FileModel("D:\\01. Mamma Mia.mp3");
 			file.save("D:\\test");
 			assertNotNull(file);
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

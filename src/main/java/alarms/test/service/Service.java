@@ -15,14 +15,18 @@ public class Service implements IService {
 	}
 
 	@Override
-	public void delete(FileModel file) {
+	public void delete(int id) {
+		FileModel file = get(id);
+		if (file == null) {
+			return;
+		}
 		files.remove(file);
 	}
 
 	@Override
-	public FileModel get(String fileName) {
+	public FileModel get(int id) {
 		for (FileModel file : files) {
-			if (fileName.equals(file.getFileName())) {
+			if (file.hashCode() == id) {
 				return file;
 			}
 		}
@@ -40,6 +44,28 @@ public class Service implements IService {
 
 	@Override
 	public LinkedHashSet<FileModel> getFiles() {
+		return files;
+	}
+
+	@Override
+	public LinkedList<FileModel> getFiles(String name) {
+		LinkedList<FileModel> files = new LinkedList<FileModel>();
+		for (FileModel file : this.files) {
+			if (file.getFileName() == name) {
+				files.add(file);
+			}
+		}
+		return files;
+	}
+
+	@Override
+	public LinkedList<FileModel> getFiles(int beginSize, int endSize) {
+		LinkedList<FileModel> files = new LinkedList<FileModel>();
+		for (FileModel file : this.files) {
+			if (file.getSize() >= beginSize && file.getSize() <= beginSize) {
+				files.add(file);
+			}
+		}
 		return files;
 	}
 

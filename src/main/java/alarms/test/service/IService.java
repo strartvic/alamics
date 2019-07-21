@@ -19,15 +19,15 @@ public interface IService {
 	 * 
 	 * @param file файл
 	 */
-	void delete(FileModel file);
+	void delete(int id);
 
 	/**
-	 * Получить файл по имени
+	 * Получить файл по id
 	 * 
-	 * @param fileName имя файла
+	 * @param id уник
 	 * @return файл
 	 */
-	FileModel get(String fileName);
+	FileModel get(int id);
 
 	/**
 	 * Получить имена файлов
@@ -42,5 +42,22 @@ public interface IService {
 	 * @return файлы
 	 */
 	LinkedHashSet<FileModel> getFiles();
+
+	/**
+	 * Получить файлы по имени
+	 * 
+	 * @param name имя файла
+	 * @return файлы
+	 */
+	LinkedList<FileModel> getFiles(String name);
+
+	/**
+	 * Получить файлы по размеру
+	 * 
+	 * @param beginSize начальный размер (байты)
+	 * @param endSize   конечный размер (байты)
+	 * @return файлы
+	 */
+	LinkedList<FileModel> getFiles(int beginSize, int endSize);
 
 }

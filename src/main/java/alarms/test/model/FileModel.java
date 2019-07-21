@@ -19,8 +19,11 @@ public class FileModel {
 
 	private byte[] bytes;
 
-	public FileModel(String filePath) throws IOException {
+	public FileModel(String filePath) throws IOException, Exception {
 		File file = new File(filePath);
+		if ((int) file.length() > 15e+7) {
+			throw new Exception("Размер файла превышает допустимое значение 15Мбайт!");
+		}
 		bytes = new byte[(int) (file.length())];
 		try (BufferedInputStream bufInStr = new BufferedInputStream(new FileInputStream(filePath));) {
 			bufInStr.read(bytes);
@@ -114,4 +117,7 @@ public class FileModel {
 		return bytes.length;
 	}
 
+	public int getHashCode() {
+		return hashCode();
+	}
 }
