@@ -3,6 +3,7 @@ package alarms.test.model;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 
@@ -38,11 +39,12 @@ public class FileModelTest {
 	public void testFileModelSave() {
 		try {
 			FileModel file = new FileModel(xls.getAbsolutePath());
-			file.save(new StringBuilder().append(xls.getParent()).append("\\").append("temp2.xls").toString());
+			file.save(new StringBuilder().append(xls.getParent()).append("\\").append("temp").toString());
 
-			File xls2 = new File(
-					new StringBuilder().append(xls.getParent()).append("\\").append("temp2.xls").toString());
-			assertEquals(xls.length(), xls2.length());
+			File xls2 = new File(new StringBuilder().append(xls.getParent()).append("\\").append("temp\\")
+					.append(xls.getName()).toString());
+
+			assertTrue(xls.length() == xls2.length());
 
 			xls2.delete();
 		} catch (Exception e) {
