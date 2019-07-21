@@ -120,4 +120,16 @@ public class FileModel {
 	public int getHashCode() {
 		return hashCode();
 	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	public void setFileType(String fileType) {
+		this.fileType = fileType;
+	}
+
+	public void setDate(Instant date) {
+		this.date = date;
+	}
 }
