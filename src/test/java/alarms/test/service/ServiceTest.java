@@ -1,6 +1,7 @@
 package alarms.test.service;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -75,8 +76,7 @@ public class ServiceTest {
 		IService service = new Service();
 		service.add(file);
 		service.add(file2);
-		assertNotNull(service.getFiles(0, 150000));
-
+		assertFalse(service.getFiles(0, 150000).isEmpty());
 	}
 
 }

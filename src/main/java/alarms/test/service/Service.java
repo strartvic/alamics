@@ -62,7 +62,7 @@ public class Service implements IService {
 	public LinkedList<FileModel> getFiles(int beginSize, int endSize) {
 		LinkedList<FileModel> files = new LinkedList<FileModel>();
 		for (FileModel file : this.files) {
-			if (file.getSize() >= beginSize && file.getSize() <= beginSize) {
+			if (file.getSize() >= beginSize && file.getSize() <= endSize) {
 				files.add(file);
 			}
 		}
