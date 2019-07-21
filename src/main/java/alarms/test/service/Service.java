@@ -38,4 +38,9 @@ public class Service implements IService {
 		return fileNames;
 	}
 
+	@Override
+	public LinkedHashSet<FileModel> getFiles() {
+		return files;
+	}
+
 }
