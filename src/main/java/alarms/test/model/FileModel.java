@@ -12,6 +12,11 @@ import java.util.Arrays;
 public class FileModel {
 
 	/**
+	 * Уникальный номер
+	 */
+	private int guid;
+
+	/**
 	 * Имя файла
 	 */
 	private String fileName;
@@ -43,6 +48,7 @@ public class FileModel {
 			String fullName = file.getName();
 			fileName = fullName.substring(0, fullName.lastIndexOf('.'));
 			fileType = fullName.substring(fullName.lastIndexOf('.') + 1);
+			guid = hashCode();
 		} catch (IOException e) {
 			e.printStackTrace();
 			throw new IOException();
@@ -130,10 +136,6 @@ public class FileModel {
 		return bytes.length;
 	}
 
-	public int getHashCode() {
-		return hashCode();
-	}
-
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
@@ -148,5 +150,9 @@ public class FileModel {
 
 	public byte[] getBytes() {
 		return bytes;
+	}
+
+	public int getGuid() {
+		return guid;
 	}
 }

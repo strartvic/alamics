@@ -1,10 +1,7 @@
 package alarms.test.app;
 
-import java.io.IOException;
-import java.util.LinkedHashSet;
 import java.util.LinkedList;
 
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,44 +9,45 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import alarms.test.model.FileModel;
-import alarms.test.service.IService;
-import alarms.test.service.Service;
+import alarms.test.model.FileModelDTO;
+import alarms.test.service.Facade;
+import alarms.test.service.IFacade;
 
 @RestController
 public class Controller {
 
-	private IService service = new Service();
+	private IFacade facade = new Facade();
 
 	{
 		try {
-			service.add(new FileModel("D:\\01. Mamma Mia.mp3"));
-			service.add(new FileModel("D:\\01. Mamma Mia.mp3"));
-			service.add(new FileModel("D:\\test.xls"));
+			facade.add(new FileModel("D:\\01. Mamma Mia.mp3"));
+			facade.add(new FileModel("D:\\01. Mamma Mia.mp3"));
+			facade.add(new FileModel("D:\\test.xls"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
 	@RequestMapping("/file-service")
-	public LinkedHashSet<FileModel> getFiles() {
-		return service.getFiles();
+	public LinkedList<FileModelDTO> getFiles() {
+		return facade.getFiles();
 	}
 
 	@RequestMapping("/file-service/file-names")
 	public LinkedList<String> getFilesNames() {
-		return service.getFileNames();
+		return facade.getFileNames();
 	}
 
 	@RequestMapping("/file-service/delete-file")
 	public void deleteFile(@RequestParam(value = "fileId") int fileId) {
-		service.delete(fileId);
+		facade.delete(fileId);
 	}
 
 	@RequestMapping("/file-service/add-file")
 	public void addFile(@RequestParam(value = "filePath") String filePath) {
 		try {
 			FileModel file = new FileModel(filePath);
-			service.add(file);
+			facade.add(file);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -57,19 +55,7 @@ public class Controller {
 
 	@RequestMapping("/file-service/download")
 	public HttpServletResponse download(@RequestParam(value = "fileId") int fileId, HttpServletResponse response) {
-		FileModel file = service.get(fileId);
-		String fullName = new StringBuilder().append(file.getFileName()).append(".").append(file.getFileType())
-				.toString();
-
-		response.setContentType("application/octet-stream");
-		response.setHeader("Content-Disposition", "attachment;filename=" + fullName);
-		try (ServletOutputStream out = response.getOutputStream();) {
-			out.write(file.getBytes());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		return response;
+		return facade.getLink(fileId, response);
 	}
 
 }
