@@ -5,6 +5,8 @@ import java.util.LinkedList;
 
 import alarms.test.model.FileModel;
 
+//fixme переименовать в FileStorageServiceImpl
+//fixme и это сервис @Service, почитай в чем прикол сервисов, и что такое бины в спринге
 public class Service implements IService {
 
 	private LinkedHashSet<FileModel> files = new LinkedHashSet<FileModel>();

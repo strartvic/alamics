@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import alarms.test.model.FileModel;
 import alarms.test.model.FileModelDTO;
 
+//fixme я бы переименовал его в FileStorageFacade и поместил в директорию alarms.test.facade
+//fixme фасад по идее тоже сервис (@Service)
+//fixme и если это имплементация интерфейса или абстрактного класса, то лучше их называть ...Impl (FileStorageFacadeImpl)
 public class Facade implements IFacade {
 
 	private IService service = new Service();

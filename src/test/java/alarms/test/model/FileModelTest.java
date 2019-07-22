@@ -11,6 +11,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+//fixme тесты потом посмотрим) когда сервис сделаешь)))
 public class FileModelTest {
 
 	private static File xls;

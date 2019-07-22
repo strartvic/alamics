@@ -38,9 +38,12 @@ public class FileModel {
 
 	public FileModel(String filePath) throws IOException, Exception {
 		File file = new File(filePath);
+		//fixme у спринга есть конфиг, настройка допустимой размерности файла
 		if ((int) file.length() > 15e+7) {
 			throw new Exception("Размер файла превышает допустимое значение 15Мбайт!");
 		}
+
+		//fixme вижу модель содержит byte[], его и надо возвращать при скачивании
 		bytes = new byte[(int) (file.length())];
 		try (BufferedInputStream bufInStr = new BufferedInputStream(new FileInputStream(filePath));) {
 			bufInStr.read(bytes);
@@ -55,10 +58,13 @@ public class FileModel {
 		}
 	}
 
+	//fixme модель файла не должна ничего сохранять, этим должен заниматься FileStorageService
 	public void save(String dirPath) {
 		if (dirPath == null || dirPath.isEmpty()) {
 			return;
 		}
+		//fixme класс File применять вобще не стоит
+		//fixme должжно быть MultipartFile -> byte[] без всяких сохранений в файл на диске
 		File dir = new File(dirPath);
 		dir.mkdirs();
 		if (!dir.isDirectory()) {
