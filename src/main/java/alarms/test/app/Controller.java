@@ -1,7 +1,11 @@
 package alarms.test.app;
 
+import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
+
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -49,6 +53,23 @@ public class Controller {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	@RequestMapping("/file-service/download")
+	public HttpServletResponse download(@RequestParam(value = "fileId") int fileId, HttpServletResponse response) {
+		FileModel file = service.get(fileId);
+		String fullName = new StringBuilder().append(file.getFileName()).append(".").append(file.getFileType())
+				.toString();
+
+		response.setContentType("application/octet-stream");
+		response.setHeader("Content-Disposition", "attachment;filename=" + fullName);
+		try (ServletOutputStream out = response.getOutputStream();) {
+			out.write(file.getBytes());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return response;
 	}
 
 }

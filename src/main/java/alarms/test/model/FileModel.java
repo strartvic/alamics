@@ -11,12 +11,24 @@ import java.util.Arrays;
 
 public class FileModel {
 
+	/**
+	 * Имя файла
+	 */
 	private String fileName;
 
+	/**
+	 * Тип файла
+	 */
 	private String fileType;
 
+	/**
+	 * Дата создания
+	 */
 	private Instant date;
 
+	/**
+	 * Байтовое представление
+	 */
 	private byte[] bytes;
 
 	public FileModel(String filePath) throws IOException, Exception {
@@ -28,8 +40,9 @@ public class FileModel {
 		try (BufferedInputStream bufInStr = new BufferedInputStream(new FileInputStream(filePath));) {
 			bufInStr.read(bytes);
 			date = Instant.now();
-			fileName = file.getName().substring(0, file.getName().lastIndexOf('.'));
-			fileType = file.getName().substring(file.getName().lastIndexOf('.') + 1);
+			String fullName = file.getName();
+			fileName = fullName.substring(0, fullName.lastIndexOf('.'));
+			fileType = fullName.substring(fullName.lastIndexOf('.') + 1);
 		} catch (IOException e) {
 			e.printStackTrace();
 			throw new IOException();
@@ -131,5 +144,9 @@ public class FileModel {
 
 	public void setDate(Instant date) {
 		this.date = date;
+	}
+
+	public byte[] getBytes() {
+		return bytes;
 	}
 }
