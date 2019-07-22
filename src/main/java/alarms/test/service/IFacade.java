@@ -1,11 +1,13 @@
 package alarms.test.service;
 
-import java.util.LinkedHashSet;
 import java.util.LinkedList;
 
-import alarms.test.model.FileModel;
+import javax.servlet.http.HttpServletResponse;
 
-public interface IService {
+import alarms.test.model.FileModel;
+import alarms.test.model.FileModelDTO;
+
+public interface IFacade {
 
 	/**
 	 * Добавить файл
@@ -22,12 +24,12 @@ public interface IService {
 	void delete(int id);
 
 	/**
-	 * Получить файл по id
+	 * Получить представление файла по id
 	 * 
 	 * @param id уник
 	 * @return файл
 	 */
-	FileModel get(int id);
+	FileModelDTO get(int id);
 
 	/**
 	 * Получить имена файлов
@@ -37,27 +39,35 @@ public interface IService {
 	LinkedList<String> getFileNames();
 
 	/**
-	 * Получить файлы
+	 * Получить представления файлов
 	 * 
 	 * @return файлы
 	 */
-	LinkedHashSet<FileModel> getFiles();
+	LinkedList<FileModelDTO> getFiles();
 
 	/**
-	 * Получить файлы по имени
+	 * Получить представления файлов по имени
 	 * 
 	 * @param name имя файла
 	 * @return файлы
 	 */
-	LinkedList<FileModel> getFiles(String name);
+	LinkedList<FileModelDTO> getFiles(String name);
 
 	/**
-	 * Получить файлы по размеру
+	 * Получить представления файлов по размеру
 	 * 
 	 * @param beginSize начальный размер (байты)
 	 * @param endSize   конечный размер (байты)
 	 * @return файлы
 	 */
-	LinkedList<FileModel> getFiles(int beginSize, int endSize);
+	LinkedList<FileModelDTO> getFiles(int beginSize, int endSize);
 
+	/**
+	 * Получить линк
+	 * 
+	 * @param fileId   уник
+	 * @param response ответ
+	 * @return ответ
+	 */
+	HttpServletResponse getLink(int fileId, HttpServletResponse response);
 }
