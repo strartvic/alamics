@@ -1,4 +1,4 @@
-package alarms.test.controller;
+package alarms.test.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

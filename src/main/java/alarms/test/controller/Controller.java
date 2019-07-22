@@ -1,4 +1,4 @@
-package alarms.test.app;
+package alarms.test.controller;
 
 import java.util.LinkedList;
 
@@ -12,8 +12,10 @@ import alarms.test.model.FileModel;
 import alarms.test.model.FileModelDTO;
 import alarms.test.service.Facade;
 import alarms.test.service.IFacade;
+import io.swagger.annotations.Api;
 
 @RestController
+@Api(value = "fileService", description = "Операции для работы с файлами")
 public class Controller {
 
 	private IFacade facade = new Facade();
