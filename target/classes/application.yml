@@ -1,21 +1,8 @@
 spring:
    application:
       name: file-service
+   servlet:    multipart:      max-file-size:        15MB
+      max-request-size: 
+        15MB
 server:
    port: 8080
-
----
-spring:
-   profiles: dev
-   application:
-      name: file-service
-server:
-   port: 9090
-
----
-spring: 
-   profiles: prod
-   application:
-      name: file-service
-server: 
-   port: 4431
