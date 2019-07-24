@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 import alarms.test.model.FileModel;
 
-public interface IService {
+public interface FileStorageService {
 
 	/**
 	 * Добавить файл

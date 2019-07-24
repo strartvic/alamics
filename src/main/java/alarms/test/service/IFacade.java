@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import javax.servlet.http.HttpServletResponse;
 
 import alarms.test.model.FileModel;
-import alarms.test.model.FileModelDTO;
+import alarms.test.web.dto.FileModelDTO;
 
 public interface IFacade {
 

@@ -1,13 +1,10 @@
 package alarms.test.model;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.Instant;
 import java.util.Arrays;
+
+import org.springframework.web.multipart.MultipartFile;
 
 public class FileModel {
 
@@ -24,7 +21,7 @@ public class FileModel {
 	/**
 	 * Тип файла
 	 */
-	private String fileType;
+	private String fileType = "";
 
 	/**
 	 * Дата создания
@@ -36,54 +33,17 @@ public class FileModel {
 	 */
 	private byte[] bytes;
 
-	public FileModel(String filePath) throws IOException, Exception {
-		File file = new File(filePath);
-		//fixme у спринга есть конфиг, настройка допустимой размерности файла
-		if ((int) file.length() > 15e+7) {
-			throw new Exception("Размер файла превышает допустимое значение 15Мбайт!");
-		}
+	public FileModel(MultipartFile file) throws IOException {
+		bytes = file.getBytes();
+		date = Instant.now();
 
-		//fixme вижу модель содержит byte[], его и надо возвращать при скачивании
-		bytes = new byte[(int) (file.length())];
-		try (BufferedInputStream bufInStr = new BufferedInputStream(new FileInputStream(filePath));) {
-			bufInStr.read(bytes);
-			date = Instant.now();
-			String fullName = file.getName();
-			fileName = fullName.substring(0, fullName.lastIndexOf('.'));
-			fileType = fullName.substring(fullName.lastIndexOf('.') + 1);
-			guid = hashCode();
-		} catch (IOException e) {
-			e.printStackTrace();
-			throw new IOException();
+		fileName = file.getOriginalFilename();
+		int indexPoint = fileName.lastIndexOf('.');
+		if (indexPoint != -1) {
+			fileType = fileName.substring(indexPoint + 1);
+			fileName = fileName.substring(0, indexPoint);
 		}
-	}
-
-	//fixme модель файла не должна ничего сохранять, этим должен заниматься FileStorageService
-	public void save(String dirPath) {
-		if (dirPath == null || dirPath.isEmpty()) {
-			return;
-		}
-		//fixme класс File применять вобще не стоит
-		//fixme должжно быть MultipartFile -> byte[] без всяких сохранений в файл на диске
-		File dir = new File(dirPath);
-		dir.mkdirs();
-		if (!dir.isDirectory()) {
-			return;
-		}
-		File newFile = new File(new StringBuilder().append(dirPath).append("\\").append(fileName).append(".")
-				.append(fileType).toString());
-		try {
-			newFile.createNewFile();
-			try (BufferedOutputStream bufInStr = new BufferedOutputStream(new FileOutputStream(newFile));) {
-				bufInStr.write(bytes);
-			} catch (IOException e) {
-				e.printStackTrace();
-				return;
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-			return;
-		}
+		guid = hashCode();
 	}
 
 	@Override

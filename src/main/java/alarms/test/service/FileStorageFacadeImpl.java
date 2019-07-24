@@ -7,15 +7,17 @@ import java.util.LinkedList;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import alarms.test.model.FileModel;
-import alarms.test.model.FileModelDTO;
+import alarms.test.web.dto.FileModelDTO;
 
-//fixme я бы переименовал его в FileStorageFacade и поместил в директорию alarms.test.facade
-//fixme фасад по идее тоже сервис (@Service)
-//fixme и если это имплементация интерфейса или абстрактного класса, то лучше их называть ...Impl (FileStorageFacadeImpl)
-public class Facade implements IFacade {
+@Service
+public class FileStorageFacadeImpl implements IFacade {
 
-	private IService service = new Service();
+	@Autowired
+	private FileStorageService service;
 
 	@Override
 	public void add(FileModel file) {
