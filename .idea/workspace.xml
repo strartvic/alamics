@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="004b4980-eb2f-4dfb-9047-ca863ca0a7aa" name="Default Changelist" comment="- Добавлены тесты для FileStorageServiceImpl&#10;- Исправлены ошибки">
+      <change afterPath="$PROJECT_DIR$/src/test/java/alarms/test/service/FileStorageServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/alarms/test/service/FileStorageServiceImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/alamics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alamics.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alarms/test/service/FileStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alarms/test/service/FileStorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alarms/test/service/FileStorageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alarms/test/service/FileStorageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alarms/test/model/FileModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alarms/test/model/FileModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/alarms/test/service/FileStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/alarms/test/service/FileStorageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/alarms/test/service/FileStorageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/alarms/test/service/FileStorageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/alarms/test/web/controller/FileStorageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/alarms/test/web/controller/FileStorageController.class" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="alarms.test" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="JavaeeView">
+    <option name="showModules" value="false" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1OVSeonV2L4oAE0Uf4NWR8qo8zr" />
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="alarms.test.service" />
+      <recent name="alarms.test.model" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.All in alamics">
+    <configuration name="All in alamics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alamics" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileStorageServiceImplTest.getFileNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alamics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="alarms.test.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="alarms.test.service" />
+      <option name="MAIN_CLASS_NAME" value="alarms.test.service.FileStorageServiceImplTest" />
+      <option name="METHOD_NAME" value="getFileNames" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileStorageServiceImplTest.getFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alamics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="alarms.test.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="alarms.test.service" />
+      <option name="MAIN_CLASS_NAME" value="alarms.test.service.FileStorageServiceImplTest" />
+      <option name="METHOD_NAME" value="getFiles" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileStorageServiceImplTest.getFilesByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alamics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="alarms.test.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="alarms.test.service" />
+      <option name="MAIN_CLASS_NAME" value="alarms.test.service.FileStorageServiceImplTest" />
+      <option name="METHOD_NAME" value="getFilesByName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileStorageServiceImplTest.getFilesBySize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alamics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="alarms.test.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="alarms.test.service" />
+      <option name="MAIN_CLASS_NAME" value="alarms.test.service.FileStorageServiceImplTest" />
+      <option name="METHOD_NAME" value="getFilesBySize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.FileStorageServiceImplTest.getFileNames" />
+      <item itemvalue="JUnit.FileStorageServiceImplTest.getFiles" />
+      <item itemvalue="JUnit.FileStorageServiceImplTest.getFilesByName" />
+      <item itemvalue="JUnit.FileStorageServiceImplTest.getFilesBySize" />
+      <item itemvalue="JUnit.All in alamics" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in alamics" />
+        <item itemvalue="JUnit.FileStorageServiceImplTest.getFilesBySize" />
+        <item itemvalue="JUnit.FileStorageServiceImplTest.getFilesByName" />
+        <item itemvalue="JUnit.FileStorageServiceImplTest.getFiles" />
+        <item itemvalue="JUnit.FileStorageServiceImplTest.getFileNames" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="004b4980-eb2f-4dfb-9047-ca863ca0a7aa" name="Default Changelist" comment="" />
+      <created>1563815281784</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563815281784</updated>
+      <workItem from="1563815283563" duration="3132000" />
+      <workItem from="1563904418819" duration="1298000" />
+      <workItem from="1564061371887" duration="14155000" />
+    </task>
+    <task id="LOCAL-00001" summary="Comment1">
+      <created>1563817671869</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563817671869</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Добавлены тесты для FileModel">
+      <created>1564072019348</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564072019348</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Comment1" />
+    <MESSAGE value="Добавлены тесты для FileModel" />
+    <MESSAGE value="- Добавлены тесты для FileStorageServiceImpl&#10;- Исправлены ошибки" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Добавлены тесты для FileStorageServiceImpl&#10;- Исправлены ошибки" />
+  </component>
+</project>
