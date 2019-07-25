@@ -21,10 +21,10 @@ public class FileModelMapperImpl implements FileModelMapper {
 
         FileModelDTO fileModelDTO = new FileModelDTO();
 
-        fileModelDTO.setDate( fileModel.getDate() );
         fileModelDTO.setGuid( fileModel.getGuid() );
         fileModelDTO.setName( fileModel.getName() );
         fileModelDTO.setType( fileModel.getType() );
+        fileModelDTO.setDate( fileModel.getDate() );
 
         return fileModelDTO;
     }

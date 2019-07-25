@@ -26,7 +26,7 @@ public class FileModel {
 	/**
 	 * Дата создания
 	 */
-	private Instant date;
+	private Instant date = Instant.now();
 
 	/**
 	 * Байтовое представление
@@ -35,7 +35,6 @@ public class FileModel {
 
 	public FileModel(MultipartFile file) throws IOException {
 		bytes = file.getBytes();
-		date = Instant.now();
 
 		name = file.getOriginalFilename();
 		int indexPoint = name.lastIndexOf('.');
@@ -47,43 +46,23 @@ public class FileModel {
 	}
 
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + Arrays.hashCode(bytes);
-		result = prime * result + ((date == null) ? 0 : date.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((type == null) ? 0 : type.hashCode());
-		return result;
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		FileModel fileModel = (FileModel) o;
+
+		if (name != null ? !name.equals(fileModel.name) : fileModel.name != null) return false;
+		if (type != null ? !type.equals(fileModel.type) : fileModel.type != null) return false;
+		return Arrays.equals(bytes, fileModel.bytes);
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		FileModel other = (FileModel) obj;
-		if (!Arrays.equals(bytes, other.bytes))
-			return false;
-		if (date == null) {
-			if (other.date != null)
-				return false;
-		} else if (!date.equals(other.date))
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (type == null) {
-			if (other.type != null)
-				return false;
-		} else if (!type.equals(other.type))
-			return false;
-		return true;
+	public int hashCode() {
+		int result = name != null ? name.hashCode() : 0;
+		result = 31 * result + (type != null ? type.hashCode() : 0);
+		result = 31 * result + Arrays.hashCode(bytes);
+		return result;
 	}
 
 	public String getName() {
