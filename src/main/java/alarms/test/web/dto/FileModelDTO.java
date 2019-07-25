@@ -2,8 +2,6 @@ package alarms.test.web.dto;
 
 import java.time.Instant;
 
-import alarms.test.model.FileModel;
-
 public class FileModelDTO {
 
 	private int guid;
@@ -13,13 +11,6 @@ public class FileModelDTO {
 	private String type;
 
 	private Instant date;
-
-	public FileModelDTO(FileModel fileModel) {
-		this.guid = fileModel.getGuid();
-		this.name = fileModel.getFileName();
-		this.type = fileModel.getFileType();
-		this.date = fileModel.getDate();
-	}
 
 	public int getGuid() {
 		return guid;
@@ -35,6 +26,22 @@ public class FileModelDTO {
 
 	public Instant getDate() {
 		return date;
+	}
+
+	public void setGuid(int guid) {
+		this.guid = guid;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public void setDate(Instant date) {
+		this.date = date;
 	}
 
 }

@@ -40,7 +40,7 @@ public class FileStorageServiceImpl implements FileStorageService {
 	public LinkedList<String> getFileNames() {
 		LinkedList<String> fileNames = new LinkedList<String>();
 		for (FileModel file : files) {
-			fileNames.add(file.getFileName());
+			fileNames.add(file.getName());
 		}
 		return fileNames;
 	}
@@ -54,7 +54,7 @@ public class FileStorageServiceImpl implements FileStorageService {
 	public LinkedList<FileModel> getFiles(String name) {
 		LinkedList<FileModel> files = new LinkedList<FileModel>();
 		for (FileModel file : this.files) {
-			if (file.getFileName() == name) {
+			if (file.getName() == name) {
 				files.add(file);
 			}
 		}

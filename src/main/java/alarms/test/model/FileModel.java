@@ -16,12 +16,12 @@ public class FileModel {
 	/**
 	 * Имя файла
 	 */
-	private String fileName;
+	private String name;
 
 	/**
 	 * Тип файла
 	 */
-	private String fileType = "";
+	private String type = "";
 
 	/**
 	 * Дата создания
@@ -37,11 +37,11 @@ public class FileModel {
 		bytes = file.getBytes();
 		date = Instant.now();
 
-		fileName = file.getOriginalFilename();
-		int indexPoint = fileName.lastIndexOf('.');
+		name = file.getOriginalFilename();
+		int indexPoint = name.lastIndexOf('.');
 		if (indexPoint != -1) {
-			fileType = fileName.substring(indexPoint + 1);
-			fileName = fileName.substring(0, indexPoint);
+			type = name.substring(indexPoint + 1);
+			name = name.substring(0, indexPoint);
 		}
 		guid = hashCode();
 	}
@@ -52,8 +52,8 @@ public class FileModel {
 		int result = 1;
 		result = prime * result + Arrays.hashCode(bytes);
 		result = prime * result + ((date == null) ? 0 : date.hashCode());
-		result = prime * result + ((fileName == null) ? 0 : fileName.hashCode());
-		result = prime * result + ((fileType == null) ? 0 : fileType.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((type == null) ? 0 : type.hashCode());
 		return result;
 	}
 
@@ -73,25 +73,25 @@ public class FileModel {
 				return false;
 		} else if (!date.equals(other.date))
 			return false;
-		if (fileName == null) {
-			if (other.fileName != null)
+		if (name == null) {
+			if (other.name != null)
 				return false;
-		} else if (!fileName.equals(other.fileName))
+		} else if (!name.equals(other.name))
 			return false;
-		if (fileType == null) {
-			if (other.fileType != null)
+		if (type == null) {
+			if (other.type != null)
 				return false;
-		} else if (!fileType.equals(other.fileType))
+		} else if (!type.equals(other.type))
 			return false;
 		return true;
 	}
 
-	public String getFileName() {
-		return fileName;
+	public String getName() {
+		return name;
 	}
 
-	public String getFileType() {
-		return fileType;
+	public String getType() {
+		return type;
 	}
 
 	public Instant getDate() {
@@ -102,12 +102,12 @@ public class FileModel {
 		return bytes.length;
 	}
 
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
+	public void setName(String fileName) {
+		this.name = fileName;
 	}
 
-	public void setFileType(String fileType) {
-		this.fileType = fileType;
+	public void setType(String fileType) {
+		this.type = fileType;
 	}
 
 	public void setDate(Instant date) {

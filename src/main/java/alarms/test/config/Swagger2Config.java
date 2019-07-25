@@ -18,8 +18,8 @@ public class Swagger2Config {
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("alarms.test.controller")).paths(PathSelectors.regex("/.*"))
-				.build().apiInfo(apiEndPointsInfo());
+				.apis(RequestHandlerSelectors.basePackage("alarms.test.web.controller"))
+				.paths(PathSelectors.regex("/.*")).build().apiInfo(apiEndPointsInfo());
 	}
 
 	private ApiInfo apiEndPointsInfo() {

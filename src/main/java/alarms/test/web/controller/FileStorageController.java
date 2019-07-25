@@ -1,7 +1,6 @@
 package alarms.test.web.controller;
 
 import java.io.IOException;
-import java.util.LinkedHashSet;
 import java.util.LinkedList;
 
 import javax.servlet.ServletOutputStream;
@@ -25,20 +24,12 @@ import alarms.test.web.dto.FileModelDTO;
 @RequestMapping("/file-service")
 public class FileStorageController {
 
-	// Сейчас фасад исключил, работаю с сервисом, поэтому возвращается
-	// полный набор параметров модели файла вместе с байтовым массивом
 	@Autowired
 	private FileStorageService service;
 
-	// Тестовый метод для маппера (выпадает в ошибку)
-	@GetMapping("/test")
-	public FileModelDTO getFilesTest() {
-		return FileModelMapper.INSTANCE.fileModelToFileModelDTO(service.getFiles().iterator().next());
-	}
-
 	@GetMapping("/")
-	public LinkedHashSet<FileModel> getFiles() {
-		return service.getFiles();
+	public LinkedList<FileModelDTO> getFiles() {
+		return FileModelMapper.INSTANCE.fileModelToFileModelDTO(service.getFiles());
 	}
 
 	@GetMapping("/file-names")
@@ -61,15 +52,9 @@ public class FileStorageController {
 	}
 
 	@GetMapping("/download")
-	// fixme при скачивании сервис должен отдать файл, а не линк
-	// под линком подразумевалось некое апи, напрмер <host>/file-service/download,
-	// которое должно отдавать поток с файлом
 	public void download(@RequestParam(value = "fileId") int fileId, HttpServletResponse response) {
-
-		// Это из фасада перенес))) Так же передавать обратно или нет??
 		FileModel file = service.get(fileId);
-		String fullName = new StringBuilder().append(file.getFileName()).append(".").append(file.getFileType())
-				.toString();
+		String fullName = new StringBuilder().append(file.getName()).append(".").append(file.getType()).toString();
 
 		response.setContentType("application/octet-stream");
 		response.setHeader("Content-Disposition", "attachment;filename=" + fullName);
