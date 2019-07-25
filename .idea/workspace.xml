@@ -1,41 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="004b4980-eb2f-4dfb-9047-ca863ca0a7aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_processor_1_3_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/alarms/test/model/FileModelTest.java" afterDir="false" />
+    <list default="true" id="004b4980-eb2f-4dfb-9047-ca863ca0a7aa" name="Default Changelist" comment="- Добавлены тесты для FileStorageServiceImpl&#10;- Исправлены ошибки">
+      <change afterPath="$PROJECT_DIR$/src/test/java/alarms/test/service/FileStorageServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/alarms/test/service/FileStorageServiceImplTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/alamics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alamics.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_3_0_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alarms/test/model/FileModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alarms/test/model/FileModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/str/alarms.test/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/str/alarms.test/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/alarms/test/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/alarms/test/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/alarms/test/config/Swagger2Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/alarms/test/config/Swagger2Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/alarms/test/mapper/FileModelMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/alarms/test/mapper/FileModelMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/alarms/test/mapper/FileModelMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/alarms/test/mapper/FileModelMapperImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/alarms/test/model/FileModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/alarms/test/model/FileModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alarms/test/service/FileStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alarms/test/service/FileStorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alarms/test/service/FileStorageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alarms/test/service/FileStorageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alarms/test/model/FileModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alarms/test/model/FileModelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/alarms/test/service/FileStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/alarms/test/service/FileStorageService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/alarms/test/service/FileStorageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/alarms/test/service/FileStorageServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/alarms/test/web/controller/FileStorageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/alarms/test/web/controller/FileStorageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/alarms/test/web/dto/FileModelDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/alarms/test/web/dto/FileModelDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/alarms/test/mapper/FileModelMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/alarms/test/mapper/FileModelMapperImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,10 +84,12 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="alarms.test.service" />
       <recent name="alarms.test.model" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -129,98 +108,93 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FileModelTest.testEquals">
-    <configuration name="FileModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in alamics">
+    <configuration name="All in alamics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alamics" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="alarms.test.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="alarms.test.model" />
-      <option name="MAIN_CLASS_NAME" value="alarms.test.model.FileModelTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileModelTest.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileStorageServiceImplTest.getFileNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alamics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="alarms.test.model.*" />
+          <option name="PATTERN" value="alarms.test.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="alarms.test.model" />
-      <option name="MAIN_CLASS_NAME" value="alarms.test.model.FileModelTest" />
-      <option name="METHOD_NAME" value="testEquals" />
+      <option name="PACKAGE_NAME" value="alarms.test.service" />
+      <option name="MAIN_CLASS_NAME" value="alarms.test.service.FileStorageServiceImplTest" />
+      <option name="METHOD_NAME" value="getFileNames" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileModelTest.testFileModel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileStorageServiceImplTest.getFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alamics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="alarms.test.model.*" />
+          <option name="PATTERN" value="alarms.test.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="alarms.test.model" />
-      <option name="MAIN_CLASS_NAME" value="alarms.test.model.FileModelTest" />
-      <option name="METHOD_NAME" value="testFileModel" />
+      <option name="PACKAGE_NAME" value="alarms.test.service" />
+      <option name="MAIN_CLASS_NAME" value="alarms.test.service.FileStorageServiceImplTest" />
+      <option name="METHOD_NAME" value="getFiles" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileModelTest.testHashCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileStorageServiceImplTest.getFilesByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alamics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="alarms.test.model.*" />
+          <option name="PATTERN" value="alarms.test.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="alarms.test.model" />
-      <option name="MAIN_CLASS_NAME" value="alarms.test.model.FileModelTest" />
-      <option name="METHOD_NAME" value="testHashCode" />
+      <option name="PACKAGE_NAME" value="alarms.test.service" />
+      <option name="MAIN_CLASS_NAME" value="alarms.test.service.FileStorageServiceImplTest" />
+      <option name="METHOD_NAME" value="getFilesByName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="alamics.test" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+    <configuration name="FileStorageServiceImplTest.getFilesBySize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alamics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="alarms.test.*" />
+          <option name="PATTERN" value="alarms.test.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="alarms.test.Application" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="alarms.test.service" />
+      <option name="MAIN_CLASS_NAME" value="alarms.test.service.FileStorageServiceImplTest" />
+      <option name="METHOD_NAME" value="getFilesBySize" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.alamics.test" />
-      <item itemvalue="JUnit.FileModelTest" />
-      <item itemvalue="JUnit.FileModelTest.testFileModel" />
-      <item itemvalue="JUnit.FileModelTest.testHashCode" />
-      <item itemvalue="JUnit.FileModelTest.testEquals" />
+      <item itemvalue="JUnit.FileStorageServiceImplTest.getFileNames" />
+      <item itemvalue="JUnit.FileStorageServiceImplTest.getFiles" />
+      <item itemvalue="JUnit.FileStorageServiceImplTest.getFilesByName" />
+      <item itemvalue="JUnit.FileStorageServiceImplTest.getFilesBySize" />
+      <item itemvalue="JUnit.All in alamics" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FileModelTest.testEquals" />
-        <item itemvalue="JUnit.FileModelTest.testHashCode" />
-        <item itemvalue="JUnit.FileModelTest.testFileModel" />
-        <item itemvalue="JUnit.FileModelTest" />
-        <item itemvalue="Spring Boot.alamics.test" />
+        <item itemvalue="JUnit.All in alamics" />
+        <item itemvalue="JUnit.FileStorageServiceImplTest.getFilesBySize" />
+        <item itemvalue="JUnit.FileStorageServiceImplTest.getFilesByName" />
+        <item itemvalue="JUnit.FileStorageServiceImplTest.getFiles" />
+        <item itemvalue="JUnit.FileStorageServiceImplTest.getFileNames" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +216,7 @@
       <updated>1563815281784</updated>
       <workItem from="1563815283563" duration="3132000" />
       <workItem from="1563904418819" duration="1298000" />
-      <workItem from="1564061371887" duration="9041000" />
+      <workItem from="1564061371887" duration="14155000" />
     </task>
     <task id="LOCAL-00001" summary="Comment1">
       <created>1563817671869</created>
@@ -251,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563817671869</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавлены тесты для FileModel">
+      <created>1564072019348</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564072019348</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +266,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Comment1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comment1" />
+    <MESSAGE value="Добавлены тесты для FileModel" />
+    <MESSAGE value="- Добавлены тесты для FileStorageServiceImpl&#10;- Исправлены ошибки" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Добавлены тесты для FileStorageServiceImpl&#10;- Исправлены ошибки" />
   </component>
 </project>

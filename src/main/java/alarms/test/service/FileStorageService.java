@@ -9,17 +9,19 @@ public interface FileStorageService {
 
 	/**
 	 * Добавить файл
-	 * 
-	 * @param file файл
-	 */
-	void add(FileModel file);
+	 *
+     * @param file файл
+     * @return true/false
+     */
+	boolean add(FileModel file);
 
 	/**
 	 * удалить файл
-	 * 
-	 * @param file файл
-	 */
-	void delete(int id);
+	 *
+     * @param id уник номер
+     * @return true/false
+     */
+	boolean delete(int id);
 
 	/**
 	 * Получить файл по id

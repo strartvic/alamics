@@ -13,17 +13,17 @@ public class FileStorageServiceImpl implements FileStorageService {
 	private LinkedHashSet<FileModel> files = new LinkedHashSet<FileModel>();
 
 	@Override
-	public void add(FileModel file) {
-		files.add(file);
+	public boolean add(FileModel file) {
+		return files.add(file);
 	}
 
 	@Override
-	public void delete(int id) {
+	public boolean delete(int id) {
 		FileModel file = get(id);
 		if (file == null) {
-			return;
+			return false;
 		}
-		files.remove(file);
+		return files.remove(file);
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class FileStorageServiceImpl implements FileStorageService {
 
 	@Override
 	public LinkedList<String> getFileNames() {
-		LinkedList<String> fileNames = new LinkedList<String>();
+		LinkedList<String> fileNames = new LinkedList<>();
 		for (FileModel file : files) {
 			fileNames.add(file.getName());
 		}
@@ -52,9 +52,9 @@ public class FileStorageServiceImpl implements FileStorageService {
 
 	@Override
 	public LinkedList<FileModel> getFiles(String name) {
-		LinkedList<FileModel> files = new LinkedList<FileModel>();
+		LinkedList<FileModel> files = new LinkedList<>();
 		for (FileModel file : this.files) {
-			if (file.getName() == name) {
+			if (file.getName().equals(name)) {
 				files.add(file);
 			}
 		}
@@ -63,7 +63,7 @@ public class FileStorageServiceImpl implements FileStorageService {
 
 	@Override
 	public LinkedList<FileModel> getFiles(int beginSize, int endSize) {
-		LinkedList<FileModel> files = new LinkedList<FileModel>();
+		LinkedList<FileModel> files = new LinkedList<>();
 		for (FileModel file : this.files) {
 			if (file.getSize() >= beginSize && file.getSize() <= endSize) {
 				files.add(file);
