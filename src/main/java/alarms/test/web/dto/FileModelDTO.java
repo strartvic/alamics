@@ -14,13 +14,6 @@ public class FileModelDTO {
 
 	private Instant date;
 
-	public FileModelDTO(int guid, String name, String type, Instant date) {
-		this.guid = guid;
-		this.name = name;
-		this.type = type;
-		this.date = date;
-	}
-
 	public FileModelDTO(FileModel fileModel) {
 		this.guid = fileModel.getGuid();
 		this.name = fileModel.getFileName();

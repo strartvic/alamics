@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import alarms.test.mapper.FileModelMapper;
 import alarms.test.model.FileModel;
 import alarms.test.service.FileStorageService;
 import alarms.test.web.dto.FileModelDTO;
-import alarms.test.web.dto.FileModelMapper;
 
 @RestController
 @RequestMapping("/file-service")
